@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Card</title>
+    <link
+      rel="stylesheet"
+      href="/Front-end Challenge/code/template/Style/challengeCard/card.css"
+    />
+    <link
+      rel="shortcut icon"
+      href="/Front-end Challenge/assets/images/challengeCard/favicon-32x32.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="left_section">
+          <div class="cards">
+            <div class="front_card">
+              <img
+                src="/Front-end Challenge/assets/images/challengeCard/bg-card-front.png"
+                alt="front-card"
+              />
+              <div class="card_container">
+                <img
+                  class="card_logo"
+                  src="/Front-end Challenge/assets/images/challengeCard/card-logo.svg"
+                  alt="logo"
+                />
+                <h1 id="number">0000 0000 0000 0000</h1>
+                <div class="card_info">
+                  <span id="name">Jane Appleseed</span>
+                  <span id="date">
+                    <span id="month">00</span>
+                    <span id="year">00</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="back_card">
+              <img
+                src="/Front-end Challenge/assets/images/challengeCard/bg-card-back.png"
+                alt="back_card"
+              />
+              <span id="cvc">000</span>
+            </div>
+          </div>
+        </div>
+        <div class="right_section">
+          <form>
+            <div class="grid_1">
+              <label for="card_name">Card Holder Name</label>
+              <input
+                type="text"
+                placeholder="e.g Jane Applessed"
+                id="card_name"
+                required
+              />
+            </div>
+            <div class="grid_2">
+              <label for="card_number">Card Number</label>
+              <input
+                type="number"
+                oninput="if(this.value.length > this.maxLength) this.value=this.value.slice(0,this.maxLength)"
+                minlength="16"
+                maxlength="16"
+                placeholder="1234 5678 9123 0000"
+                id="card_number"
+                required
+              />
+            </div>
+            <div class="card_information">
+              <div id="card_date">
+                <label for="card_date">Exp. Date (MM/YY)</label>
+                <div class="two_inp">
+                  <div>
+                    <input
+                      type="number"
+                      placeholder="MM"
+                      oninput="if(this.value.length > this.maxLength) this.value=this.value.slice(0,this.maxLength)"
+                      maxlength="2"
+                      minlength="2"
+                      id="card_month"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <input
+                      type="number"
+                      placeholder="YY"
+                      oninput="if(this.value.length > this.maxLength) this.value=this.value.slice(0,this.maxLength)"
+                      maxlength="2"
+                      minlength="2"
+                      id="card_year"
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="grid_4">
+                <label for="card_cvc">CVC</label>
+                <input
+                  type="number"
+                  placeholder="e.g. 123"
+                  oninput="if(this.value.length > this.maxLength) this.value=this.value.slice(0,this.maxLength)"
+                  maxlength="3"
+                  minlength="3"
+                  id="card_cvc"
+                  required
+                />
+              </div>
+            </div>
+            <button id="submit_btn" type="submit">Confirm</button>
+          </form>
+          <div class="thank hidden">
+            <img
+              src="/Front-end Challenge/assets/images/challengeCard/icon-complete.svg"
+              alt="completed"
+            />
+            <h1>Thank You!</h1>
+            <p>We've added your card details</p>
+            <button>Continue</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="/Front-end Challenge/code/template/JS/challengeCard/card.js"></script>
+  </body>
+</html>

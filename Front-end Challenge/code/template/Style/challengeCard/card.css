@@ -1,0 +1,163 @@
+/* # Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Typography
+
+### Body Copy
+
+- Font size: 18px
+
+### Font
+
+- Family: [Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk)
+- Weights: 500 */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100&family=Space+Grotesk:wght@500&display=swap");
+
+:root{
+    /* Primary */
+
+--Linear-gradient:(active input border): hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+--Red: (input errors): hsl(0, 100%, 66%);
+
+ /* Neutral */
+
+--White: hsl(0, 0%, 100%);
+--Light-grayish-violet: hsl(270, 3%, 87%);
+--Dark-grayish-violet: hsl(279, 6%, 55%);
+--Very-dark-violet: hsl(278, 68%, 11%);
+}
+*,*>*{
+    font-family: 'Space Grotesk', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height:100vh;
+}
+.hidden{
+    display: none;
+}
+.error{
+    border: 2px solid var(--Red);
+}
+.error_message{
+    gap: 0;
+}
+.error_message::after{
+    content:"can't be blank";
+    color: var(--Red);
+    margin-top: .2rem;
+}
+.container{
+    display:flex;
+    align-items: center;
+}
+.left_section{
+    min-height: 100vh;
+    width: 40%;
+    background-image: url(/Front-end\ Challenge/assets/images/challengeCard/bg-main-desktop.png);
+    background-position:center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.cards{
+    position: absolute;
+    top: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    left: 100%;
+    transform: translate(-50%, -50%);
+}
+.front_card{
+    position: relative;
+    transform: translateX(-100px);
+}
+.card_logo{
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+
+}
+#number{
+    position: absolute;
+    color: var(--White);
+    bottom: 5rem;
+    left: 1rem;
+    letter-spacing: 2px;
+}
+.card_info{
+    position: absolute;
+    bottom: 2rem;
+    left: 1rem;
+    right: 3rem;
+    display: flex;
+    color: var(--White);
+    justify-content: space-between;
+}
+.back_card{
+    position: relative;
+}
+#cvc{
+    position: absolute;
+    right: 3.5rem;
+    top: 7rem;
+    color: var(--Light-grayish-violet);
+}
+.right_section{
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    width:100%;
+}
+.right_section form{
+    display: flex;
+    gap: 1rem;
+    width: 350px;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(4,1fr);
+}
+label{
+    color: var(--Very-dark-violet);
+    margin-bottom: .3rem;
+    text-transform: uppercase;
+}
+input{
+    padding: .5rem;
+    font-size: 18px;
+    border: 1px solid var(--Dark-grayish-violet);
+    border-radius: 6px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+input::placeholder{
+    font-family: inherit;
+    color: var(--Dark-grayish-violet);
+}
+input:focus{
+    outline-color: hsl(249, 99%, 64%);
+}
+.grid_1{
+    display: flex;
+    flex-direction:column;
+    grid-column: 2 span;
+}
+.grid_2{
+    display: flex;
+    flex-direction:column;
+    grid-column: 2 span;
+}
+.grid_3{
+
+}
