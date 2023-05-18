@@ -77,7 +77,6 @@ const data = {
 function appendFrag(frag, parent) {
   var children = [].slice.call(frag.childNodes, 0);
   parent.appendChild(frag);
-  //console.log(children);
   return children[1];
 }
 
@@ -189,14 +188,12 @@ const createCommentNode = (commentObject) => {
 
 const appendComment = (parentNode, commentNode, parentId) => {
   const bu_reply = commentNode.querySelector(".reply");
-  // parentNode.appendChild(commentNode);
   const appendedCmnt = appendFrag(commentNode, parentNode);
   const replyTo = appendedCmnt.querySelector(".usr-name").textContent;
   bu_reply.addEventListener("click", () => {
     if (parentNode.classList.contains("replies")) {
       spawnReplyInput(parentNode, parentId, replyTo);
     } else {
-      //console.log(appendedCmnt.querySelector(".replies"));
       spawnReplyInput(
         appendedCmnt.querySelector(".replies"),
         parentId,
