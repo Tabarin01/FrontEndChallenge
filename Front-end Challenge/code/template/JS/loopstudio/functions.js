@@ -10,6 +10,7 @@ function animateMenu() {
   } else {
     menu.setAttribute("class", "fas fa-bars");
   }
+  // menu.setAttribute("class", menu.className === "fas fa-bars" ? "fas fa-times" : menu.className) ternary
 
   // Toggle background
   lNav.classList.toggle("change");
