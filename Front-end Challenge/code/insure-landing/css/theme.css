@@ -1,0 +1,28 @@
+:root {
+  --dark-violet: hsl(256, 26%, 20%);
+  --grayish-blue: hsl(216, 30%, 68%);
+  --very-dark-violet: hsl(270, 9%, 17%);
+  --dark-grayish-violet: hsl(273, 4%, 51%);
+  --very-light-gray: hsl(0, 0%, 98%);
+
+  --font-family-sans-serif: "Karla", sans-serif;
+}
+
+body {
+  font: 400 1rem/1.5 var(--font-family-sans-serif);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+  font-family: "DM Serif Display", "serif";
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}

@@ -1,25 +1,22 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@400;700&display=swap");
+@import './css/normalize.css';
+@import './css/layout.css';
+@import './css/theme.css';
+@import './css/header.css';
+@import './css/intro.css';
+@import './css/business.css';
+@import './css/footer.css';
 
-:root {
-  --Dark-Violet: hsl(256, 26%, 20%);
-  --Grayish-Blue: hsl(216, 30%, 68%);
-
-  --Very-Dark-Violet: hsl(270, 9%, 17%);
-  --Dark-Grayish-Violet: hsl(273, 4%, 51%);
-  --Very-Light-Gray: hsl(0, 0%, 98%);
+#mobile-nav-visibile {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
 }
 
-* {
-  margin: 0;
-  padding: 0;
+.attribution {
+  font-size: 11px;
+  text-align: center;
 }
-
-.header {
-  font-family: "DM Serif Display", sans-serif;
-}
-body {
-  font-family: "Karla", sans-serif;
-}
-
-@media screen and(max-width:375px) {
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
