@@ -108,7 +108,7 @@ a.read {
   align-items: center;
 }
 .single-box.unseen {
-  background-color: var(--Very-light-grayish-blue);
+  background-color: hsl(220, 6%, 90%);
   border-radius: 10px;
 }
 .avatar img {
