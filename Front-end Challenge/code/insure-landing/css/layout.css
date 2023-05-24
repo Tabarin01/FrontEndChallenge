@@ -1,0 +1,43 @@
+.root {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+button {
+  width: 146px;
+  height: 40px;
+  border: 2px solid var(--dark-violet);
+  font-family: var(--font-family-sans-serif);
+  font-size: 0.875rem;
+  font-weight: 700;
+  background-color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: var(--very-dark-violet);
+  background-color: transparent;
+  padding: 0;
+}
+
+button:active {
+  background-color: var(--dark-violet);
+  color: var(--very-light-gray);
+}
+
+button.inverted {
+  color: var(--very-light-gray);
+  border-color: var(--very-light-gray);
+}
+
+button.inverted:active {
+  background-color: var(--very-light-gray);
+  color: var(--dark-violet);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  padding-bottom: 30px;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

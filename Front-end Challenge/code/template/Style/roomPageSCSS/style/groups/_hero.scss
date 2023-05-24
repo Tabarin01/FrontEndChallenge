@@ -1,0 +1,245 @@
+.hero {
+  width: 100%;
+
+  @include screen-from("tablet-wide") {
+    display: grid;
+    grid-template-columns: auto calc(30.56% + 160px);
+    height: 100%;
+  }
+}
+
+.hero__slider {
+  width: 100%;
+  height: 360px;
+  position: relative;
+
+  @include screen-from("tablet-wide") {
+    height: 100%;
+  }
+}
+
+.hero__img-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.hero__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  visibility: hidden;
+
+  &--active {
+    visibility: visible;
+  }
+
+  &--enter-right {
+    animation: enterRight 0.5s ease-out forwards;
+    z-index: 1;
+  }
+
+  &--enter-left {
+    animation: enterLeft 0.5s ease-out forwards;
+    z-index: 1;
+  }
+}
+
+@keyframes enterRight {
+  from {
+    visibility: hidden;
+    transform: translateX(100%);
+  }
+  to {
+    visibility: visible;
+    transform: translateX(0);
+  }
+}
+
+@keyframes enterLeft {
+  from {
+    visibility: hidden;
+    transform: translateX(-100%);
+  }
+  to {
+    visibility: visible;
+    transform: translateX(0);
+  }
+}
+
+.hero__nav {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+
+  @include screen-from("desktop") {
+    right: -160px;
+  }
+}
+
+.hero__button {
+  background-color: $color-black;
+  height: 57px;
+  width: 55px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-dark-gray;
+  }
+
+  @include screen-from("desktop") {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.hero__button-icon {
+  height: 18px;
+  width: 9px;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  &--prev {
+    background-image: url("/Front-end Challenge/assets/images/roomPage/icon-angle-left.svg");
+  }
+
+  &--next {
+    background-image: url("/Front-end Challenge/assets/images/roomPage/icon-angle-right.svg");
+  }
+
+  @include screen-from("desktop") {
+    width: 14px;
+    height: 24px;
+  }
+}
+
+.hero__content {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  position: relative;
+  background-color: white;
+  overflow: hidden;
+
+  @include screen-from("tablet-wide") {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    max-width: 420px;
+  }
+
+  @include screen-from("desktop") {
+    margin-bottom: 100px;
+    margin-top: 50px;
+  }
+
+  &--fade-out {
+    animation: fadeOut 0.25s forwards;
+  }
+
+  &--fade-in {
+    animation: fadeIn 0.5s forwards;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+// .hero__content-item {
+//   visibility: hidden;
+//   display: none;
+//   // position: absolute;
+//   // width: 100%;
+//   // transform: translateX(20%);
+
+//   &--active {
+//     display: block;
+//     visibility: visible;
+//   }
+// }
+
+.hero__title {
+  font-family: $font;
+  font-weight: 600;
+  color: $color-black;
+  font-size: 28px;
+  line-height: 114%;
+
+  @include screen-from("tablet-wide") {
+    font-size: 38px;
+  }
+}
+
+.hero__text {
+  color: $color-gray;
+  font-size: 12px;
+  line-height: 170%;
+  font-weight: 400;
+  margin-top: 15px;
+  font-family: $font;
+
+  @include screen-from("tablet-wide") {
+    margin-top: 25px;
+  }
+}
+
+.hero__link {
+  color: $color-black;
+  font-family: $font;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  margin-top: 50px;
+  display: block;
+
+  &:hover {
+    color: $color-gray;
+  }
+
+  @include screen-from("tablet-wide") {
+    margin-top: 30px;
+  }
+}
+
+.hero__arrow {
+  margin-left: 15px;
+}
+.hero__link:hover .hero__arrow {
+  path {
+    fill: $color-gray;
+  }
+}

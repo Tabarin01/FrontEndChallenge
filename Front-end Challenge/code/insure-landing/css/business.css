@@ -1,0 +1,136 @@
+.business {
+  max-width: 1110px;
+  margin: 0 auto;
+  padding: 304px 0 150px;
+}
+
+.business .title {
+  font-size: 72px;
+  line-height: 1;
+  grid-column: 1/4;
+  margin-bottom: 95px;
+  position: relative;
+  padding-top: 65px;
+}
+
+.business .title::before {
+  content: "";
+  width: 140px;
+  border-top: 1px solid var(--grayish-blue);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.business .features {
+  display: flex;
+  margin-bottom: 160px;
+}
+
+.business .feature {
+  flex: 1 1 30%;
+  margin-right: 40px;
+}
+
+.business .feature:last-child {
+  margin-right: 0;
+}
+
+.business .feature-icon {
+  margin-bottom: 35px;
+}
+
+.business .feature-title {
+  margin-bottom: 20px;
+  line-height: 1;
+}
+
+.business .feature-desc {
+  color: var(--dark-grayish-violet);
+}
+
+.business .more {
+  height: 250px;
+  background-color: var(--dark-violet);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 0 80px;
+}
+
+.business .bg-pattern-desktop {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.business .bg-pattern-mobile {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.business .inverted {
+  z-index: 1;
+  flex-shrink: 0;
+}
+
+.business .more-title {
+  font-size: 56px;
+  margin-right: 20px;
+  line-height: 1;
+}
+
+@media (max-width: 1199px) {
+  .business .bg-pattern-desktop {
+    display: none;
+  }
+  .business .bg-pattern-mobile {
+    display: block;
+  }
+
+  .business {
+    display: block;
+    padding: 140px 15px 150px;
+  }
+
+  .business .title {
+    font-size: 48px;
+    text-align: center;
+  }
+
+  .business .title::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .business .features {
+    display: block;
+    text-align: center;
+  }
+
+  .business .feature {
+    margin-right: 0;
+    margin-bottom: 60px;
+  }
+
+  .business .more {
+    display: block;
+    text-align: center;
+    height: auto;
+    padding: 74px 40px;
+  }
+
+  .business .more-title {
+    margin-bottom: 45px;
+    margin-right: 0;
+    font-size: 42px;
+  }
+
+  #mobile-nav-visibile:checked ~ .business {
+    display: none !important;
+  }
+}

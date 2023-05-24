@@ -1,0 +1,115 @@
+.app-footer {
+  background-color: var(--very-light-gray);
+  position: relative;
+}
+
+.app-footer .content {
+  max-width: 1110px;
+  margin: 0 auto;
+  padding: 65px 0;
+  position: relative;
+}
+
+.app-footer .bg-pattern-desktop,
+.app-footer .bg-pattern-mobile {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.app-footer .bg-pattern-mobile {
+  display: none;
+}
+
+.app-footer .social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid hsl(273, 4%, 81%);
+  padding-bottom: 35px;
+  margin-bottom: 48px;
+}
+
+.app-footer .links a {
+  margin-right: 15px;
+  text-decoration: none;
+  line-height: 0;
+}
+.app-footer .links a:last-child {
+  margin-right: 0;
+}
+
+.app-footer .sitemap {
+  display: flex;
+  flex-wrap: wrap;
+}
+.app-footer .sitemap .group .title {
+  margin-bottom: 40px;
+  color: var(--dark-grayish-violet);
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 700;
+}
+.app-footer .sitemap .group {
+  flex: 1 1 250px;
+  margin-right: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.app-footer .sitemap .group:last-child {
+  margin-right: 0;
+}
+
+.app-footer .sitemap .group a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--dark-violet);
+  margin-bottom: 15px;
+}
+
+@media (max-width: 1199px) {
+  .app-footer .content {
+    padding: 65px 15px;
+  }
+
+  .app-footer .bg-pattern-desktop {
+    display: none;
+  }
+  .app-footer .bg-pattern-mobile {
+    display: block;
+  }
+
+  .app-footer .sitemap {
+    text-align: center;
+  }
+
+  .app-footer .sitemap .group {
+    margin-bottom: 40px;
+  }
+
+  .app-footer .social {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-items: center;
+  }
+
+  .app-footer .logo {
+    margin-bottom: 32px;
+  }
+
+  .app-footer .sitemap .group {
+    flex: 1 1 500px;
+  }
+
+  #mobile-nav-visibile:checked ~ .app-footer {
+    display: none !important;
+  }
+}
+
+@media (max-width: 375px) {
+  .app-footer .bg-pattern-mobile {
+    max-width: 100%;
+  }
+}
