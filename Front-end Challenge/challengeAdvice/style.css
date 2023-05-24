@@ -2,6 +2,7 @@
 
 /* Primary */
 :root {
+  /* root viene usato per dichiarare variabili globali all'interno del css */
   --Light-Cyan: hsl(193, 38%, 86%);
   --Neon-Green: hsl(150, 100%, 66%);
 
@@ -29,6 +30,10 @@ body {
   width: 500px;
   background-color: var(--Dark-Grayish-Blue);
   border-radius: 1rem;
+  /* relative posiziona l'immagine seguendo il flusso del documento,
+  mentre absolute viene posizionato rispetto al suo primo genitore posizionato.
+  L'elemento absolute viene rimosso dal flusso del documento e gli altri elementi
+  non tengono conto dello spazio occupato da esso*/
   position: relative;
 }
 .card-container {
@@ -39,6 +44,8 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
+  /* La proprietà CSS gap viene utilizzata per specificare lo spazio tra le 
+  celle di un grid container o tra gli elementi di un flex container */
 }
 p {
   color: var(--Neon-Green);

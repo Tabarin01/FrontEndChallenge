@@ -11,6 +11,7 @@ async function generateAdvice() {
   adviceId.innerText = id;
   adviceText.innerText = advice;
 }
+
 generateAdvice();
 
 adviceBtn.addEventListener("click", generateAdvice);

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Challenge Advice</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="shortcut icon"
+      href="./images/favicon-32x32.png"
+      type="image/x-icon"
+    />
+  </head>
+
+  <body>
+    <div class="advice-card">
+      <!-- contenitore esterno -->
+      <div class="card-container">
+        <!-- contenitore interno -->
+        <p>Advice # <span id="advice-id"></span></p>
+        <!-- lo <span> non genera un nuovo blocco di contenuto, 
+                ma viene utilizzato per applicare stili o 
+                specificare altre proprietà a una porzione
+                 specifica di testo o elementi all'interno di un paragrafo, 
+                 titolo, elenco o qualsiasi altro elemento di blocco. -->
+        <h2>" <span id="advice-text"></span>"</h2>
+        <picture>
+          <!-- L'elemento <picture> in HTML è utilizzato 
+            per fornire diverse versioni di un'immagine in 
+            base alle caratteristiche del dispositivo o alle
+            esigenze di visualizzazione -->
+          <source
+            media="(max-width:500px )"
+            srcset="./images/pattern-divider-mobile.svg"
+          />
+          <!-- elementi figlio <source>, ognuno dei quali 
+            rappresenta una versione alternativa dell'immagine. -->
+          <img src="./images/pattern-divider-desktop.svg" alt="pattern" />
+        </picture>
+        <button id="generate-btn">
+          <img src="./images/icon-dice.svg" alt="dice" />
+        </button>
+      </div>
+    </div>
+    <script src="./function.js"></script>
+  </body>
+</html>
