@@ -1,0 +1,67 @@
+.left_section {
+  min-height: 100vh;
+  width: 40%;
+  background-image: url("../images/bg-main-desktop.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.cards {
+  position: absolute;
+  top: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  left: 100%;
+  transform: translate(-50%, -50%);
+}
+.front_card {
+  position: relative;
+  transform: translateX(-100px);
+}
+
+.card_logo {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+#number {
+  position: absolute;
+  color: var(--White);
+  bottom: 5rem;
+  left: 1rem;
+  letter-spacing: 2px;
+}
+.card_info {
+  position: absolute;
+  bottom: 2rem;
+  left: 1rem;
+  right: 3rem;
+  display: flex;
+  color: var(--White);
+  justify-content: space-between;
+}
+.back_card {
+  position: relative;
+}
+.error {
+  border: 2px solid red;
+}
+
+.error_message {
+  gap: 0;
+}
+.error_message::after {
+  content: "cant't be blank";
+  text-transform: uppercase;
+  font-size: 14px;
+  color: var(--Red);
+  margin-top: 0.2rem;
+}
+#cvc {
+  position: absolute;
+  right: 3.5rem;
+  top: 7rem;
+  color: var(--Light-grayish-violet);
+}

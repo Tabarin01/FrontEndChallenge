@@ -32,6 +32,8 @@ The designs were created to the following widths:
   --Dark-grayish-violet: hsl(279, 6%, 55%);
   --Very-dark-violet: hsl(278, 68%, 11%);
 }
+/* La selezione * > * rappresenta tutti gli elementi
+ figli diretti di un elemento genitore. */
 *,
 * > * {
   font-family: "Space Grotesk", sans-serif;
@@ -59,7 +61,7 @@ body {
 .left_section {
   min-height: 100vh;
   width: 40%;
-  background-image: url("/Front-end\ Challenge/assets/images/challengeCard/bg-main-desktop.png");
+  background-image: url("../images/bg-main-desktop.png");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -264,10 +266,11 @@ form button {
   .back_card img {
     width: 280px;
   }
+
   .left_section {
     width: 100%;
     min-height: 30vh;
-    background-image: url("/Front-end\ Challenge/assets/images/challengeCard/bg-main-mobile.png");
+    background-image: url("../images/bg-main-mobile.png");
   }
   .cards {
     flex-direction: column-reverse;
