@@ -58,17 +58,6 @@ nav {
 .menu {
   display: none;
 }
-.dropdown-menu {
-  display: inline-block;
-  align-items: center;
-  justify-content: space-between;
-  padding: 2rem 0;
-  transition: 0.3s;
-  transform: translateX(-100%);
-}
-.wide {
-  transform: translateX(0);
-}
 
 /* MAIN STYLE */
 .main-container {
@@ -241,6 +230,7 @@ nav {
   nav {
     padding-inline: 1rem;
   }
+  /* nascondo il vecchio nav-menu */
   .nav-links {
     display: none;
   }
