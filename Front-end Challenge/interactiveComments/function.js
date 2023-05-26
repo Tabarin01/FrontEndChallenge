@@ -1,8 +1,8 @@
 const data = {
   currentUser: {
     image: {
-      png: "/Front-end Challenge/assets/images/interactiveComments/avatars/image-juliusomo.png",
-      webp: "/Front-end Challenge/assets/images/interactiveComments/avatars/image-juliusomo.webp",
+      png: "./images/avatars/image-juliusomo.png",
+      webp: "./images/avatars/image-juliusomo.webp",
     },
     username: "juliusomo",
   },
@@ -16,8 +16,8 @@ const data = {
       score: 12,
       user: {
         image: {
-          png: "/Front-end Challenge/assets/images/interactiveComments/avatars/image-amyrobson.png",
-          webp: "/Front-end Challenge/assets/images/interactiveComments/avatars/image-amyrobson.webp",
+          png: "./images/avatars/image-amyrobson.png",
+          webp: "./images/avatars/image-amyrobson.webp",
         },
         username: "amyrobson",
       },
@@ -32,8 +32,8 @@ const data = {
       score: 5,
       user: {
         image: {
-          png: "/Front-end Challenge/assets/images/interactiveComments/avatars/image-maxblagun.png",
-          webp: "/Front-end Challenge/assets/images/interactiveComments/avatars/image-maxblagun.webp",
+          png: "./images/avatars/image-maxblagun.png",
+          webp: "./images/avatars/image-maxblagun.webp",
         },
         username: "maxblagun",
       },
@@ -48,8 +48,8 @@ const data = {
           replyingTo: "maxblagun",
           user: {
             image: {
-              png: "/Front-end Challenge/assets/images/interactiveComments/avatars/image-ramsesmiron.png",
-              webp: "/Front-end Challenge/assets/images/interactiveComments/avatars/image-ramsesmiron.webp",
+              png: "./images/avatars/image-ramsesmiron.png",
+              webp: "./images/avatars/image-ramsesmiron.webp",
             },
             username: "ramsesmiron",
           },
@@ -64,8 +64,8 @@ const data = {
           replyingTo: "ramsesmiron",
           user: {
             image: {
-              png: "/Front-end Challenge/assets/images/interactiveComments/avatars/image-juliusomo.png",
-              webp: "/Front-end Challenge/assets/images/interactiveComments/avatars/image-juliusomo.webp",
+              png: ".images/avatars/image-juliusomo.png",
+              webp: "./images/avatars/image-juliusomo.webp",
             },
             username: "juliusomo",
           },
