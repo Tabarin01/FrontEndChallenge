@@ -58,15 +58,20 @@ body {
   display: flex;
   align-items: center;
 }
+/* Sezione di sinistra con due card sovrapposte */
 .left_section {
   min-height: 100vh;
   width: 40%;
-  background-image: url("../images/bg-main-desktop.png");
-  background-position: center center;
-  background-size: cover;
+  background-image: url("./images/bg-main-desktop.png");
+  /* Background shortcut = background: colore, url(immagine), repeat o no, position, size, 
+  attachment "(specifica se l'immagine di sfondo deve scorrere con il contenuto (scroll, fixed, local).)"
+  Esempio background: #fff url('sfondo.jpg') center center no-repeat; */
+  background-position: center center; /*centrata sia orizzontalmente che verticalmente all'interno del suo contenitore.*/
+  background-size: cover; /*(length, percentage, cover, contain).*/
   background-repeat: no-repeat;
   position: relative;
 }
+/*Posizionamento delle immagini della card*/
 .cards {
   position: absolute;
   top: 50%;
@@ -75,6 +80,8 @@ body {
   gap: 2rem;
   left: 100%;
   transform: translate(-50%, -50%);
+  /* con translate sposto il div nella parte sinistra del documento,
+   utilizzo absolute in modo da toglierlo dal normale flusso del documento */
 }
 .front_card {
   position: relative;
@@ -92,6 +99,7 @@ body {
   bottom: 5rem;
   left: 1rem;
   letter-spacing: 2px;
+  /*distanziamento tra i numeri*/
 }
 .card_info {
   position: absolute;
@@ -105,26 +113,13 @@ body {
 .back_card {
   position: relative;
 }
-.error {
-  border: 2px solid red;
-}
-
-.error_message {
-  gap: 0;
-}
-.error_message::after {
-  content: "cant't be blank";
-  text-transform: uppercase;
-  font-size: 14px;
-  color: var(--Red);
-  margin-top: 0.2rem;
-}
 #cvc {
   position: absolute;
   right: 3.5rem;
   top: 7rem;
   color: var(--Light-grayish-violet);
 }
+/*Inizio sezione di destra con i form da riempire*/
 .right_section {
   display: flex;
   align-items: center;
@@ -149,6 +144,8 @@ input {
   border: 1px solid var(--Dark-grayish-violet);
   border-radius: 6px;
 }
+/*Nei browser WebKit, gli input numerici possono essere accompagnati da pulsanti di incremento e decremento
+Questo codice sottostante serve per toglierli*/
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -158,9 +155,11 @@ input::placeholder {
   font-family: inherit;
   color: var(--Dark-grayish-violet);
 }
+/* focus serve per sottolineare il bordo esterno quando selezioni l'input */
 input:focus {
   outline-color: hsl(249, 99%, 64%);
 }
+/*nel codice sottostante ci sono le 4 "griglie", grid-column: span indica la larghezza della griglia */
 .grid_1 {
   display: flex;
   flex-direction: column;
@@ -181,6 +180,7 @@ input:focus {
   grid-column: 1 span;
 }
 
+/*posizionamento dei dati della carta*/
 .card_information {
   display: flex;
   grid-column: 2 span;
@@ -214,6 +214,8 @@ form button {
   background: var(--Very-dark-violet);
   cursor: pointer;
 }
+
+/*Parte succesiva dopo il confirm*/
 .thank {
   width: 350px;
   display: flex;
@@ -239,6 +241,25 @@ form button {
   background-color: var(--Very-dark-violet);
   cursor: pointer;
 }
+/*Sottolineatura d'errore richiamata nel file js*/
+.error {
+  border: 2px solid red;
+}
+
+.error_message {
+  gap: 0;
+}
+.error_message::after {
+  content: "cant't be blank";
+  text-transform: uppercase;
+  font-size: 14px;
+  color: var(--Red);
+  margin-top: 0.2rem;
+}
+/*fine errore*/
+
+
+/*Visualizzazione per Tablet*/
 @media screen and (max-width: 1023px) {
   .front_card,
   .front_card img,
@@ -257,6 +278,7 @@ form button {
     right: 12%;
   }
 }
+/*visualizzazione per smartphone*/
 @media screen and (max-width: 767px) {
   .container {
     flex-direction: column;
@@ -266,11 +288,13 @@ form button {
   .back_card img {
     width: 280px;
   }
-
+  .card_info {
+    right: 2rem;
+  }
   .left_section {
     width: 100%;
     min-height: 30vh;
-    background-image: url("../images/bg-main-mobile.png");
+    background-image: url("./images/bg-main-mobile.png");
   }
   .cards {
     flex-direction: column-reverse;
@@ -280,6 +304,10 @@ form button {
   }
   .back_card {
     transform: translateY(70px);
+  }
+  #cvc {
+    top: 42%;
+    right: 19%;
   }
   .front_card {
     z-index: 100;
