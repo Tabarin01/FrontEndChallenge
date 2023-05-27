@@ -14,6 +14,14 @@
   </head>
   <body>
     <template class="reply-input-template">
+      <!-- I template vengono usati per:
+      - Riutilizzo del contenuto: 
+       I template consentono di definire una struttura di contenuto 
+       che può essere utilizzata più volte all'interno della stessa pagina 
+       o in diverse pagine del sito;
+      -Generazione dinamica del contenuto: I template sono anche utili 
+      quando devi generare contenuto dinamicamente basato su dati o eventi.
+      -->
       <div class="reply-input container">
         <img
           src="./images/avatars/image-juliusomo.webp"
@@ -23,6 +31,10 @@
         <textarea class="cmnt-input" placeholder="Add a comment..."></textarea>
         <button class="bu-primary">SEND</button>
       </div>
+      <!-- In questo caso il vantaggio e' di definire una struttura
+         predefinita per il modulo di input del commento e riutilizzarlo
+         Puoi clonare il template e inserire l'istanza clonata nel punto 
+         desiderato del tuo documento HTML utilizzando JavaScript.-->
     </template>
 
     <template class="comment-template">
@@ -93,6 +105,9 @@
             alt=""
             class="usr-img"
           />
+          <!-- L'elemento <textarea> in HTML è utilizzato 
+            per creare un'area di testo multilinea 
+            in cui gli utenti possono inserire del testo -->
           <textarea
             class="cmnt-input"
             placeholder="Add a comment..."
@@ -101,7 +116,7 @@
         </div>
         <!--reply input-->
       </div>
-      <!--comment sectio-->
+      <!--comment section-->
 
       <div class="modal-wrp invisible">
         <div class="modal container">

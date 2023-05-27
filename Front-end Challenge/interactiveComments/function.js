@@ -1,3 +1,4 @@
+//creazione dell'oggetto contenente i dati
 const data = {
   currentUser: {
     image: {
@@ -7,14 +8,17 @@ const data = {
     username: "juliusomo",
   },
   comments: [
+    //creazione array dei commenti
     {
-      parent: 0,
-      id: 1,
+      parent: 0, //indica l'ID del commento genitore
+      id: 1, //id univoco del commento
+      //contenuto
       content:
         "Impressive! Though it seems the drag feature could be improved. But overall it looks incredible. You've nailed the design and the responsiveness at various breakpoints works really well.",
-      createdAt: "1 month ago",
-      score: 12,
+      createdAt: "1 month ago", //data
+      score: 12, //punteggio
       user: {
+        //informazioni sull'utente
         image: {
           png: "./images/avatars/image-amyrobson.png",
           webp: "./images/avatars/image-amyrobson.webp",
@@ -72,20 +76,22 @@ const data = {
         },
       ],
     },
-  ],
+  ], //fine array dei commenti
 };
 function appendFrag(frag, parent) {
-  var children = [].slice.call(frag.childNodes, 0);
-  parent.appendChild(frag);
-  return children[1];
+  // frag verra' aggiunto come figlio del nodo genitore parent
+  var children = [].slice.call(frag.childNodes, 0); //converte in array e restituisce una NodeList (oggetto simile all'array)
+  parent.appendChild(frag); //aggiunge frag a parent
+  return children[1]; //ritorna il secondo elemento dell'array
 }
 
 const addComment = (body, parentId, replyTo = undefined) => {
+  //funzione per aggiungere un nuovo oggetto dentro 'data'
   let commentParent =
     parentId === 0
-      ? data.comments
-      : data.comments.filter((c) => c.id == parentId)[0].replies;
-  let newComment = {
+      ? data.comments // se parentId e' 0 si potra' accedere all'elemento comments dell'oggetto data
+      : data.comments.filter((c) => c.id == parentId)[0].replies; //filtra gli elementi per trovare il commento con un ID uguale a parentId per poi accedere alle risposte ('replies')
+  let newComment = { // creazione del nuovo commento
     parent: parentId,
     id:
       commentParent.length == 0
@@ -101,8 +107,8 @@ const addComment = (body, parentId, replyTo = undefined) => {
   commentParent.push(newComment);
   initComments();
 };
-const deleteComment = (commentObject) => {
-  if (commentObject.parent == 0) {
+const deleteComment = (commentObject) => { //funzione per eliminare un elemento da data
+  if (commentObject.parent == 0) { //verifica se e' una risposta del genitore o del figlio(ovvero commento originale o reply)
     data.comments = data.comments.filter((e) => e != commentObject);
   } else {
     data.comments.filter((e) => e.id === commentObject.parent)[0].replies =

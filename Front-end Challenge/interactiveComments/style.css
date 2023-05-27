@@ -69,10 +69,25 @@ button:hover {
 .comment {
   margin-bottom: 1rem;
   display: grid;
+  /* L'attributo CSS grid-template-areas viene utilizzato
+   per definire la disposizione degli elementi figlio all'interno
+  di un elemento genitore che utilizza il layout di griglia CSS.
+  La proprietà grid-template-areas accetta una serie di stringhe
+   delimitate da spazi che rappresentano i nomi delle aree definite.
+    Ciascuna stringa rappresenta una riga nella griglia,
+     con ogni carattere che indica un'area specifica. */
   grid-template-areas:
     "score user controls"
     "score comment comment"
     "score comment comment";
+  /* -------------------------------------------------
+       |       score       |      user    | controls |
+       -------------------------------------------------
+       |       score       |    comment   | comment  |
+       -------------------------------------------------
+       |       score       |    comment   | comment  |
+       -------------------------------------------------
+ */
   grid-template-columns: auto 1fr auto;
   gap: 1.5rem;
   row-gap: 1rem;
