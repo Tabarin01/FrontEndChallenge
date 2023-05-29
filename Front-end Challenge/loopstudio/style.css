@@ -35,20 +35,75 @@ h3 {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 300;
 }
-
-button {
-  display: inline-block;
-  cursor: pointer;
-  outline: none;
-  user-select: none;
+.btn {
+  width: 140px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0px 15px;
+  background-color: red;
+  border-radius: 10px;
   border: none;
+  color: white;
+  position: relative;
+  cursor: pointer;
+  font-weight: 900;
+  transition-duration: 0.2s;
+  background: linear-gradient(0deg, #000, #272727);
+}
+
+.btn:before,
+.btn:after {
+  content: "";
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  border-radius: 10px;
+  background: linear-gradient(
+    45deg,
+    #fb0094,
+    #0000ff,
+    #00ff00,
+    #ffff00,
+    #ff0000,
+    #fb0094,
+    #0000ff,
+    #00ff00,
+    #ffff00,
+    #ff0000
+  );
+  background-size: 400%;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  z-index: -1;
+  animation: steam 20s linear infinite;
+}
+
+@keyframes steam {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 400% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.btn:after {
+  filter: blur(50px);
 }
 
 /* Top */
 .content-top {
   min-height: 36rem;
   width: 100%;
-  background-image: url("/Front-end Challenge/assets/images/loopstudio/desktop/image-hero.jpg");
+  background-image: url("./images/desktop/image-hero.jpg");
   background-size: cover;
   background-position: center;
   padding: 4em 9.5em 4em 9.5em;
@@ -222,20 +277,37 @@ button {
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 40px;
 }
+.grid1 {
+  overflow: hidden;
+}
 
-.image-container {
+.grid1 .image-container {
   position: relative;
   width: 100%;
 }
 
-.image-container img {
+.grid1 .image-container img {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  transition: transform 0.5s;
 }
 
-.image-container:hover :not(h3) {
+.grid1 .image-container:hover img:not(h3) {
   opacity: 0.2;
+  transform: scale(1.5);
+}
+
+@keyframes myAnim {
+  0% {
+    background-position: center top;
+    background-size: 100%;
+  }
+
+  100% {
+    background-position: center top;
+    background-size: 150%;
+  }
 }
 
 .image-container:hover h3 {
@@ -311,6 +383,38 @@ button {
 .copyright {
   color: var(--darkGray);
 }
+
+/*
+.icons{
+  display:flex;
+  column-gap:25px;
+}
+.icon{
+  display:inline-flex;
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  outline: 2px solid #fff;
+  transition-property:
+             outline-offset, outline-color,
+             background-color;
+  transition-duration: 0.25s;
+}
+@keyframes shake{
+  10%{
+    transform:rotate(15deg);
+  }
+  20%{
+    transform: rotate(-15deg);
+  }
+  30%{
+    transform: rotate(15deg);
+  }
+  40%{
+    transform: rotate(-15deg);
+  }
+}
+*/
 
 /* Media Queries */
 @media screen and (max-width: 1330px) {
