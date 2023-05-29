@@ -87,13 +87,13 @@ nav {
   gap: 2.5rem;
 }
 .nav-links li {
-  cursor: pointer;
   color: var(--Medium-Gray);
   display: flex;
   align-items: center;
   gap: 0.5rem;
   position: relative;
   user-select: none;
+  cursor: pointer;
 }
 .nav-links li:hover {
   color: var(--Almost-Black);
@@ -117,15 +117,20 @@ nav {
 .one {
   bottom: -170px;
   right: 0;
+  cursor: default;
 }
 .two {
   bottom: -136px;
+  cursor: default;
 }
 .sub-menu .sub-link {
   display: flex;
   align-items: center;
   width: 150px;
   gap: 0.5rem;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
 }
 .active .arrow {
   transform: rotate(180deg);
@@ -191,25 +196,33 @@ main {
     gap: 1rem;
     list-style: none;
   }
+  .mobile-links p {
+    cursor: pointer;
+  }
+  .mobile-links li {
+    cursor: pointer;
+  }
   .mobile-links ul li {
     display: flex;
     color: var(--Medium-Gray);
     flex-direction: column;
-    cursor: pointer;
-    list-style: none;
+    text-decoration: none;
   }
-  .mobile-links ul li a {
+  .mobile-links ul li p {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    cursor: pointer;
   }
   .mobile-sub {
     display: none;
     flex-direction: column;
     gap: 1rem;
     margin: 1rem;
+    cursor: default;
+  }
+  .mobile-sub .sub-link {
+    cursor: pointer;
   }
   .overflow {
     background-color: black;
