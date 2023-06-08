@@ -81,23 +81,3 @@ button:hover {
     width: 350px;
   }
 }
-
-.connection {
-  position: absolute;
-  justify-content: flex-start;
-  bottom: 0;
-  left: 0;
-  background-color: var(--Light-Cyan);
-  border-radius: 17px;
-}
-.menuLinks a {
-  list-style: none;
-  margin-left: 15px;
-  font-family: "Manrope", sans-serif;
-  justify-content: flex-start;
-  font-size: 14px;
-  text-decoration: none;
-}
-.menuLinks a:hover {
-  background-color: var(--Neon-Green);
-}

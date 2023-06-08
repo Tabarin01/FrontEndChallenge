@@ -3,134 +3,57 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-    <title>Interactive comments section</title>
+
+    <title>Frontend Mentor | Four card feature section</title>
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <template class="reply-input-template">
-      <!-- I template vengono usati per:
-      - Riutilizzo del contenuto: 
-       I template consentono di definire una struttura di contenuto 
-       che può essere utilizzata più volte all'interno della stessa pagina 
-       o in diverse pagine del sito;
-      -Generazione dinamica del contenuto: I template sono anche utili 
-      quando devi generare contenuto dinamicamente basato su dati o eventi.
-      -->
-      <div class="reply-input container">
-        <img
-          src="./images/avatars/image-juliusomo.webp"
-          alt=""
-          class="usr-img"
-        />
-        <textarea class="cmnt-input" placeholder="Add a comment..."></textarea>
-        <button class="bu-primary">SEND</button>
-      </div>
-      <!-- In questo caso il vantaggio e' di definire una struttura
-         predefinita per il modulo di input del commento e riutilizzarlo
-         Puoi clonare il template e inserire l'istanza clonata nel punto 
-         desiderato del tuo documento HTML utilizzando JavaScript.-->
-    </template>
-
-    <template class="comment-template">
-      <div class="comment-wrp">
-        <div class="comment container">
-          <div class="c-score">
-            <img
-              src="./images/icon-plus.svg"
-              alt="plus"
-              class="score-control score-plus"
-            />
-            <p class="score-number">5</p>
-            <img
-              src="./images/icon-minus.svg"
-              alt="minus"
-              class="score-control score-minus"
-            />
-          </div>
-          <div class="c-controls">
-            <a class="delete"
-              ><img
-                src="./images/icon-delete.svg"
-                alt=""
-                class="control-icon"
-              />Delete</a
-            >
-            <a class="edit"
-              ><img
-                src="./iamges/icon-edit.svg"
-                alt=""
-                class="control-icon"
-              />Edit</a
-            >
-            <a class="reply"
-              ><img
-                src="./images/icon-reply.svg"
-                alt=""
-                class="control-icon"
-              />Reply</a
-            >
-          </div>
-          <div class="c-user">
-            <img
-              src="./images/avatars/image-maxblagun.webp"
-              alt=""
-              class="usr-img"
-            />
-            <p class="usr-name">maxblagun</p>
-            <p class="cmnt-at">2 weeks ago</p>
-          </div>
-          <p class="c-text">
-            <span class="reply-to"></span>
-            <span class="c-body"></span>
-          </p>
-        </div>
-        <!--comment-->
-        <div class="replies comments-wrp"></div>
-        <!--replies-->
-      </div>
-    </template>
     <main>
-      <div class="comment-section">
-        <div class="comments-wrp"></div>
-        <!--commentS wrapper-->
-        <div class="reply-input container">
-          <img
-            src="./images/avatars/image-juliusomo.webp"
-            alt=""
-            class="usr-img"
-          />
-          <!-- L'elemento <textarea> in HTML è utilizzato 
-            per creare un'area di testo multilinea 
-            in cui gli utenti possono inserire del testo -->
-          <textarea
-            class="cmnt-input"
-            placeholder="Add a comment..."
-          ></textarea>
-          <button class="bu-primary">SEND</button>
-        </div>
-        <!--reply input-->
-      </div>
-      <!--comment section-->
+      <article>
+        <h1><span>Reliable, efficient delivery</span> Powered by Technology</h1>
+        <p>
+          Our Artificial Intelligence powered tools use millions of project data
+          points to ensure that your project is successful
+        </p>
+      </article>
 
-      <div class="modal-wrp invisible">
-        <div class="modal container">
-          <h3>Delete comment</h3>
+      <div class="cards">
+        <article>
+          <h2>Supervisor</h2>
+          <p>Monitors activity to identify project roadblocks</p>
+          <img src="./images/icon-supervisor.svg" alt="" />
+        </article>
+
+        <article>
+          <h2>Team Builder</h2>
           <p>
-            Are you sure you want to delete this comment? This will remove the
-            comment and cant be undone
+            Scans our talent network to create the optimal team for your project
           </p>
-          <button class="yes">YES,DELETE</button>
-          <button class="no">NO,CANCEL</button>
-        </div>
+          <img src="./images/icon-team-builder.svg" alt="" />
+        </article>
+
+        <article>
+          <h2>Karma</h2>
+          <p>Regularly evaluates our talent to ensure quality</p>
+          <img src="./images/icon-karma.svg" alt="" />
+        </article>
+
+        <article>
+          <h2>Calculator</h2>
+          <p>
+            Uses data from past projects to provide better delivery estimates
+          </p>
+          <img src="./images/icon-calculator.svg" alt="" />
+        </article>
       </div>
     </main>
-    <script src="./function.js"></script>
   </body>
   <div class="menu-activea">
     <h1 class="button-menu">U-Menu</h1>
