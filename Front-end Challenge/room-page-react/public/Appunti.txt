@@ -1,9 +1,0 @@
-pre creare una nuova webApp in React 
-
-npx create-react-app nome    della cartella da creare
-
-
-dopodichè 
-
-npm install
-npm start
